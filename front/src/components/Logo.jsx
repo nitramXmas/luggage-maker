@@ -2,8 +2,8 @@ import './Logo.css';
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Circle-icons-briefcase.svg" />
+    <div className='logo'>
+      <img src='./src/assets/img/luggage-maker-logo.svg' alt='logo de valise'/>
     </div>
   );
 };
