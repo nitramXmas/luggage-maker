@@ -6,12 +6,7 @@ import Luggage from './pages/Luggage';
 function App() {
   return (
     <>
-<<<<<<< HEAD:src/App.jsx
     <Luggage />
-=======
-      <Navbar />
-      <Luggage />
->>>>>>> dev:front/src/App.jsx
     </>
   );
 }
