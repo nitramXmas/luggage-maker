@@ -12,9 +12,9 @@ const Game = () => {
             .then((res) => setCountry(res.data))
     },[])
   return (
-    <div>
+    <div className='game'>
         <Card {...country} />
-        <img src={country.img} alt="" />
+        <img className='bg-image' src={country.img} alt="" />
     </div>
   )
 }
