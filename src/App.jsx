@@ -6,7 +6,6 @@ import Luggage from './pages/Luggage'
 function App() {
   return (
     <>
-    <Navbar />
     <Luggage />
     </>
   );

@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5em;
+  background:linear-gradient(to right top, #97403a, #b65738, #d07430, #e29424, #ebb812);
+  ;
 }
 
 .title {
@@ -15,6 +17,21 @@
   align-items: center;
 }
 
+.title > h1 {
+  font-size: 1,5em;
+  font-weight: 800;
+}
 .title > h2 {
   font-size: 1em;
+  font-weight: 600;
+}
+.user-picture {
+  width: 20%;
+  border: #97403a solid 1px;
+  background: #97403a;
+  border-radius: 50px;
+}
+
+.user-picture > img {
+  width: 100%;
 }

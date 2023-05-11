@@ -5,6 +5,8 @@ import './Luggage.css';
 
 const Luggage = () => {
   return (
+    <>
+    <Navbar />
   <div className='home'>
     <div className='background'>
       <img src={Home} alt="mapmonde" />
@@ -14,6 +16,7 @@ const Luggage = () => {
     </div>
     <button className='play' type="submit">Faire ma valise</button>
   </div>
+  </>
 )};
 
 export default Luggage;

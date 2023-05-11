@@ -1,4 +1,5 @@
 import Logo from './Logo';
+import Capy from '../assets/img/capybara-user.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,7 +10,9 @@ const Navbar = () => {
         <h1>Luggage Maker</h1>
         <h2>Dans ma valise, il y a ...</h2>
       </div>
-      <p>USER</p>
+      <div className='user-picture'>
+        <img src={Capy} alt="capybara" />
+      </div>
     </div>
   );
 };
