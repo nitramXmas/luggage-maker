@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
+import Capy from '../assets/img/capy.png';
 import './Navbar.css';
 
 const Navbar = ({ onUserClick }) => {
@@ -13,7 +14,9 @@ const Navbar = ({ onUserClick }) => {
         <h1>Luggage Maker</h1>
         <h2>Dans ma valise, il y a ...</h2>
       </div>
-      <p className='user-icon' onClick={handleClick}>USER</p>
+      <div className='user-picture' onClick={handleClick}>
+        <img  src={Capy} alt="user picture" />
+        </div>
     </div>
   );
 };

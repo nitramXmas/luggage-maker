@@ -1,15 +1,15 @@
 .navbar {
-  height: 10%;
+  width: 100vw;
+  height: 10vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 0.5em;
+  gap: 1em;
+  padding-left: 0.05em;
   background:linear-gradient(to right top, #97403a, #b65738, #d07430, #e29424, #ebb812);
 }
 
 .title {
-  height: 100%;
-  width: 70%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@
   font-weight: 600;
 }
 .user-picture {
-  width: 20%;
+  width: 10%;
   border: #97403a solid 1px;
   background: #97403a;
   border-radius: 50px;
@@ -35,6 +35,6 @@
   width: 100%;
 }
 
-.user-icon:hover{
+.user-picture:hover{
 cursor: pointer;
 }
