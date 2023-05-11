@@ -5,7 +5,6 @@
   align-items: center;
   padding: 0 0.5em;
   background:linear-gradient(to right top, #97403a, #b65738, #d07430, #e29424, #ebb812);
-  ;
 }
 
 .title {
@@ -34,4 +33,8 @@
 
 .user-picture > img {
   width: 100%;
+}
+
+.user-icon:hover{
+cursor: pointer;
 }

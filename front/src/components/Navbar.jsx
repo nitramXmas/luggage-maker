@@ -1,7 +1,11 @@
+import React, { useState } from 'react';
 import Logo from './Logo';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onUserClick }) => {
+ 
+  const handleClick = () => onUserClick ();
+
   return (
     <div className="navbar">
       <Logo />
@@ -9,7 +13,7 @@ const Navbar = () => {
         <h1>Luggage Maker</h1>
         <h2>Dans ma valise, il y a ...</h2>
       </div>
-      <p>USER</p>
+      <p className='user-icon' onClick={handleClick}>USER</p>
     </div>
   );
 };
