@@ -1,9 +1,18 @@
-
+import { useState } from 'react';
+import './Login.css';
 
 const Login = () => {
+
+    const [pseudo,setPseudo]=useState('')
+    const [password,setPassword]=useState('')
+
+    const handleSubmit = (event) => {
+        event.preventDefault();}
+
   return (
     <>
     <div className='user-connexion'>
+        <div className='login-user'>   
     <h2>Connecte toi pour retrouver tes meilleurs score !</h2>
         <div className='form-container'>
          <form onSubmit={handleSubmit}>
@@ -19,6 +28,8 @@ const Login = () => {
             <button className='send' type="submit">Envoyer</button>
             </div>
          </form>
+         <span>Tu n'as pas encore de compte ? crée le ici !</span>
+        </div>
         </div>
     </div>
     </>
