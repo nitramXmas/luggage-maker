@@ -1,3 +1,5 @@
+import UserProfile from '../pages/UserProfile';
+
 import Logo from './Logo';
 import './Navbar.css';
 
@@ -7,9 +9,9 @@ const Navbar = () => {
       <Logo />
       <div className="title">
         <h1>Luggage Maker</h1>
-        <h2>Dans ma valise, il y a ...</h2>
+        <h2>Dans ma valise, il y a...</h2>
       </div>
-      <p>USER</p>
+      <p>user</p>
     </div>
   );
 };
