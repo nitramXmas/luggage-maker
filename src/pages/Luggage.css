@@ -12,6 +12,7 @@
 .background > img {
     width :30em;
     object-fit: fill;
+    padding-bottom: 2em;
 }
 
 .luggage > img {
