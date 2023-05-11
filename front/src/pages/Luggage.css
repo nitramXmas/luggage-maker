@@ -1,6 +1,6 @@
 .home{
-    height:90vh;
-    width: 100vw;
+    height:100%;
+    width: 100%;
     background:linear-gradient(to right bottom, #97403a, #b65738, #d07430, #e29424, #ebb812);
     display: flex;
     flex-direction: column;
