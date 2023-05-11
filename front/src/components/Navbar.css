@@ -6,6 +6,7 @@
   gap: 1em;
   padding-left: 0.05em;
   background:linear-gradient(to right top, #97403a, #b65738, #d07430, #e29424, #ebb812);
+  color:#97403a;
 }
 
 .title {
@@ -24,15 +25,20 @@
   font-size: 1em;
   font-weight: 600;
 }
-.user-picture {
-  width: 10%;
+.picture {
+  width: 20%;
   border: #97403a solid 1px;
   background: #97403a;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
-.user-picture > img {
+.picture > img {
   width: 100%;
+  object-fit: fill;
+}
+
+.user-picture:hover{
+cursor: pointer;
 }
 
 .user-picture:hover{

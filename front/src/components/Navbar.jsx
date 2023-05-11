@@ -12,7 +12,7 @@ const Navbar = ({ onUserClick }) => {
       <Logo />
       <div className="title">
         <h1>Luggage Maker</h1>
-        <h2>Dans ma valise, il y a ...</h2>
+        <h2>Dans ma valise, il me faut...</h2>
       </div>
       <div className='user-picture' onClick={handleClick}>
         <img  src={Capy} alt="user picture" />
