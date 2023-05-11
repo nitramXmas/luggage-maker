@@ -1,6 +1,16 @@
 const database = require('../config/database');
 const { default: axios } = require('axios');
 
+const dataFactor = ([data]) => {
+  return {
+    name: data.name.common,
+    capital: data.capital[0],
+    region: data.region,
+    flags: data.flags.svg,
+    alt: data.flags.alt,
+  };
+};
+
 const getRandomCountry = (request, response) => {
   database
     .query('SELECT country_name FROM luggage ORDER BY RAND() LIMIT 1')
@@ -9,9 +19,7 @@ const getRandomCountry = (request, response) => {
         .get(
           `https://restcountries.com/v3.1/name/${country_name}?fields=name,capital,region,flags`
         )
-        .then(console.log);
-
-      return response.json(country_name);
+        .then(({ data }) => response.json(dataFactor(data)));
     })
     .catch((err) => {
       console.log(err);
