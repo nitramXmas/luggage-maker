@@ -14,14 +14,14 @@ const dataFactor = ([data], image) => {
 
 const getRandomCountry = (request, response) => {
   database
-    .query('SELECT country_name, backgroud_img FROM luggage ORDER BY RAND() LIMIT 1')
+    .query('SELECT country_name, background_img FROM luggage ORDER BY RAND() LIMIT 1')
 
-    .then(([[{ country_name, backgroud_img }]]) => {
+    .then(([[{ country_name, background_img }]]) => {
       axios
         .get(
           `https://restcountries.com/v3.1/name/${country_name}?fields=name,capital,region,flags`
         )
-        .then(({ data }) => response.json(dataFactor(data, backgroud_img)));
+        .then(({ data }) => response.json(dataFactor(data, background_img)));
     })
     .catch((err) => {
       console.log(err);
