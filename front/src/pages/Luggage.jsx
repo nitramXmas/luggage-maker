@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const Luggage = () => {
 
   return (
+    
   <div className='home'>
     <div className='background'>
       <img src={Home} alt="mapmonde" />
