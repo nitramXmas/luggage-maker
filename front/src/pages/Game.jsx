@@ -17,13 +17,18 @@ const Game = () => {
     const luggageSize = 5
 
     const handleDrop = (item) => {
-        if(userChoice.length < luggageSize)  {
-                setUserChoice([...userChoice, item])
-        } else {
+        const userChoiceUpdated = [...userChoice, item];
+        if(userChoice.length < luggageSize )  {
+                setUserChoice(userChoiceUpdated)
+        }
+        
+        if(userChoiceUpdated.length>=luggageSize){
+
             alert('La valise est pleine')
         }
+        
     }
-  
+
     const handleVetements = () => {
         setIsVetement(!isVetement)
     }
@@ -89,10 +94,11 @@ const Game = () => {
         </div>
         <div className='buttons'>
             <Link to='/'><button className='play' type="submit" >RESET</button></Link>
-            <Link to='/result'><button className='play' type="submit" >SUBMIT</button></Link>
+            <Link to='/result'state ={{userChoice : userChoice, country : country}} ><button className='play' type="submit" >SUBMIT</button></Link>
         </div>
     </div>
   )
 }
 
 export default Game
+
