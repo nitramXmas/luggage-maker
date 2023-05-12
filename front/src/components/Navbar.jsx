@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import './Navbar.css';
 
@@ -9,7 +10,7 @@ const Navbar = () => {
         <h1>Luggage Maker</h1>
         <h2>Dans ma valise, il me faut...</h2>
       </div>
-      <p>USER</p>
+        <div>USER</div>
     </div>
   );
 };
