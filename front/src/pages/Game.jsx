@@ -7,7 +7,23 @@ import luggage from '../assets/img/valise.png'
 import './Game.css'
 
 const Game = () => {
-    const[country, setCountry] = useState({})
+    const[country, setCountry] = useState({});
+    
+    const[isVetement,setIsVetement] = useState(false);
+    const[isDivers,setIsDivers] = useState(false);
+    const[isSpecifique,setIsSpecifique] = useState(false);
+
+    const handleVetements = () => {
+        setIsVetement(!isVetement)
+    }
+
+    const handleDivers = () => {
+        setIsDivers(!isDivers)
+    }
+
+    const handleSpecifique = () => {
+        setIsSpecifique(!isSpecifique)
+    }
 
     useEffect(()=>{
         axios.get('http://localhost:3030/api/countries')
@@ -18,9 +34,12 @@ const Game = () => {
         <Card {...country} />
         <div className='main'>
             <div className="objectsButtons">
-                <button className='play' type="submit" >Vetements</button>
-                <button className='play' type="submit" >Divers</button>
-                <button className='play' type="submit" >Specifiques</button>
+                <button className='play' type="submit" onClick={handleVetements}>Vetements</button>
+                { isVetement && <div className='choice vetement' > fringues </div> }
+                <button className='play' type="submit" onClick={handleDivers}>Divers</button>
+                { isDivers && <div className='choice divers'> Diverserie</div> }
+                <button className='play' type="submit" onClick={handleSpecifique}>Specifiques</button>
+                { isSpecifique && <div className='choice divers' > specifiquerie </div> }
             </div>
             <img className='luggage'  src={luggage} alt="" />
         </div>

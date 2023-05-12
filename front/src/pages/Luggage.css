@@ -20,7 +20,7 @@
     position:absolute;
     right:50%;
     top:50%;
-    animation: turnAround 8s linear infinite;
+    animation: turnAround 8s linear 1s infinite alternate;
 }
 
 .play {
@@ -54,8 +54,8 @@
     75% {
       transform: translate(9em, -9em) rotate(-45deg);
     }
-
     100% {
         transform: translate(-8em, 8em) rotate(0deg);
     }
+
   }

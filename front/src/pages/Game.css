@@ -17,10 +17,26 @@
 
 .objectsButtons{
     display: flex;
+    padding-left:1em;
     width: 50vw;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+}
+
+.choice{
+width: 15em;
+min-height: 20em;
+text-align: center;
+border: solid 1px #97403a;
+border-radius: 15px;
+background:#97403a72;
+position : absolute;
+left: 7em;
+}
+
+.luggage{
+    width: 50%;
 }
 
 .buttons {
