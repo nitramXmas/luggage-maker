@@ -11,7 +11,19 @@ const Game = () => {
     const[isVetement,setIsVetement] = useState(false);
     const[isDivers,setIsDivers] = useState(false);
     const[isSpecifique,setIsSpecifique] = useState(false);
+    const [userChoice, setUserChoice] = useState([]);
+    const [isHover, setIsHover] = useState(false);
 
+    const luggageSize = 5
+
+    const handleDrop = (item) => {
+        if(userChoice.length < luggageSize)  {
+                setUserChoice([...userChoice, item])
+        } else {
+            alert('La valise est pleine')
+        }
+    }
+  
     const handleVetements = () => {
         setIsVetement(!isVetement)
     }
@@ -32,7 +44,12 @@ const Game = () => {
         {objects &&
         objects.filter((object)=>(object.type === value))
                 .map((el) => (
-        <li className='item' key={el.id}>{el.name}</li>   
+        <li className='item' 
+            key={el.id}
+            onDragEnd={() => handleDrop(el)}
+            >{el.name}
+      
+        </li>   
         ))
         }
     </ul>
@@ -68,7 +85,7 @@ const Game = () => {
                     {lists('countrySpec')}
                  </div> }
             </div>
-            <img className='luggage'  src={luggage} alt="" />
+            <img className='luggage'  src={luggage} alt="" onDragOver={()=> setIsHover(true)} onDragLeave={()=> setIsHover(false)} />
         </div>
         <div className='buttons'>
             <Link to='/'><button className='play' type="submit" >RESET</button></Link>
