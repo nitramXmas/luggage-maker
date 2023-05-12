@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -11,8 +11,9 @@ import Result from './pages/Result';
 function App() {
   return (
     <>
-      <Navbar />
+      
         <Router>
+          <Navbar />
             <Routes>
                 <Route path='/' element={<Luggage />}/>
                 <Route path='/game' element={<Game />} />
