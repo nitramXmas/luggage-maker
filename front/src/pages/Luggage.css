@@ -1,0 +1,61 @@
+.home{
+    height: 85%;
+    width: 100%;
+    background:linear-gradient(to right bottom, #97403a, #b65738, #d07430, #e29424, #ebb812);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background > img {
+    width :30em;
+    object-fit: fill;
+    padding-bottom: 2em;
+}
+
+.luggage > img {
+    width: 10em;
+    object-fit: fill;
+    position:absolute;
+    right:50%;
+    top:50%;
+    animation: turnAround 8s linear 1s infinite alternate;
+}
+
+.play {
+    font-family: 'Segoe UI', Tahoma;
+    background-color:#d07430;
+    color: #97403a;
+    border: #97403a 1px solid;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    box-shadow: 2px 3px 0px 2px;
+    cursor: pointer;
+    margin-bottom: 1em;
+  }
+  
+  .play:hover {
+    color: #d07430;
+    background-color: #97403a;
+    border: #97403a 1px solid;
+  }
+
+  @keyframes turnAround {
+    0% {
+      transform: translateX(-6em, 6em) rotate(0);
+    }
+    25% {
+      transform: translateX(9em,-9em) rotate(-45deg);
+    }
+    50% {
+        transform: translate(18em,-18em) rotate(45deg);
+    }
+    75% {
+      transform: translate(9em, -9em) rotate(-45deg);
+    }
+    100% {
+        transform: translate(-8em, 8em) rotate(0deg);
+    }
+
+  }
