@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
   padding: 0 1em;
   background:linear-gradient(to right top, #97403a, #b65738, #d07430, #e29424, #ebb812);
   color:#97403a;
@@ -26,19 +25,19 @@
 .title > h2 {
   font-size: 1em;
   font-weight: 600;
-
 }
 
 .picture {
-  width: 8%;
+  width: 10%;
+  height: 100%;
   border: #97403a solid 1px;
   background: #97403a;
   border-radius: 100px;
 }
 
 .picture > img {
-  width: 100%;
-  object-fit: fill;
+  width: 10%;
+  height: 15%;
 }
 
 .picture:hover {

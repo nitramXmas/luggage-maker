@@ -1,18 +1,25 @@
 import { useState } from 'react';
 import './CreateUser.css';
+import axios from 'axios';
 
 const CreateUser = () => {
 
     const [pseudo,setPseudo]=useState('')
     const [password,setPassword]=useState('')
+    const [email,setEmail]=useState('')
 
     const handleSubmit = (event) => {
-        event.preventDefault();}
+        event.preventDefault();
+        axios
+            .post('/api/users', {pseudo, password, email})
+            .then((response) => response)
+            .catch((err) => err)
+    }
 
   return (
     <div className='user-container'>
         <div className='create-user'>
-             <h2>Créer ton compte pour enregistrer et retrouver tes meilleurs résultats !</h2>
+             <h2>Crée ton compte pour enregistrer et retrouver tes meilleurs résultats !</h2>
             <div className='form-container'>
                 <form onSubmit={handleSubmit}>
                 <div className='form-group'>
@@ -22,6 +29,10 @@ const CreateUser = () => {
                 <div className='form-group'>
                     <label>Mot de Passe : </label>
                     <input type="password" value={password} onChange={(event) => setPassword(event.target.value)}/>
+                </div>
+                <div className='form-group'>
+                    <label>Entre ton email</label>
+                    <input type="email" value={email} onChange={(event) => setEmail(event.target.value)}/>
                 </div>
                 <div className='form-group'>
                     <button className='send' type="submit">Envoyer</button>

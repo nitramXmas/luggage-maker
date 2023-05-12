@@ -12,7 +12,7 @@ const createUser = (request, response) => {
       [firstname, lastname, email, city, language]
     )
     .then(([results]) => {
-      return response.status(201).json(results);
+      return response.redirect('/profile');
     })
     .catch((err) => {
       console.log(err);

@@ -10,10 +10,13 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link to='/'><Logo /></Link>
+      <Link to='/game'><Logo /></Link>
       <div className="title">
         <h1>Luggage Maker</h1>
         <h2>Dans ma valise, il me faut...</h2>
+      </div>
+      <div>
+      <Link to='login'><button className='play' type="submit" >Connecte toi ici!</button></Link>
       </div>
       <div className='picture'>
         <Link to='/profile'><img src={Capy} alt="user picture" /></Link>
