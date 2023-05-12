@@ -9,6 +9,19 @@
     background-size: cover;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.objectsButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10em;
+    
+
+}
 
 .buttons {
     display: flex;
