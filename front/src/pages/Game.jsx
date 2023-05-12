@@ -48,15 +48,15 @@ const Game = () => {
     <ul className='itemCountainer'>
         {objects &&
         objects.filter((object)=>(object.type === value))
-                .map((el) => (
+                .map((el) => (!userChoice.includes(el) ?
         <li className='item' 
             key={el.id}
             onDragEnd={() => handleDrop(el)}
             >{el.name}
       
-        </li>   
-        ))
-        }
+        </li> : null
+        ))}
+        
     </ul>
 
     )
