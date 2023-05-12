@@ -41,6 +41,6 @@
   object-fit: fill;
 }
 
-.picture:hover{
-cursor: pointer;
+.picture:hover {
+  cursor: pointer;
 }
