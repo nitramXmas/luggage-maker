@@ -17,12 +17,14 @@ const Game = () => {
     const luggageSize = 5
 
     const handleDrop = (item) => {
-        if(userChoice.length < luggageSize)  {
+        if(userChoice.length < luggageSize )  {
                 setUserChoice([...userChoice, item])
         } else {
             alert('La valise est pleine')
         }
     }
+
+    console.log(userChoice)
   
     const handleVetements = () => {
         setIsVetement(!isVetement)

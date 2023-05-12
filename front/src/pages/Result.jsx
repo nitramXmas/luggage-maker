@@ -11,9 +11,6 @@ const Result = (props) => {
     const choice = location.state.userChoice
     const country = location.state.country.name
 
-    console.log(choice);
-    console.log(perfectLuggage);
-
     let score = 0
 
 
