@@ -41,7 +41,7 @@ const UserProfile = () => {
     {
       scores &&
       scores.map(score => 
-      <div className='score'>
+        <div key={score.id} className='score'>
         <p>{score.country}</p> 
         <p>{score.score}</p>
       </div>)}
