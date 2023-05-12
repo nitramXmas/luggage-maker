@@ -28,14 +28,14 @@ const Game = () => {
 
     const lists = (value) => (
 
-          <ul>
-                            {objects &&
-                                objects.filter((object)=>(object.type === value))
-                                        .map((el) => (
-                                            <li key={el.id}>{el.name}</li>   
-                                        ))
-                            }
-                        </ul>
+    <ul className='itemCountainer'>
+        {objects &&
+        objects.filter((object)=>(object.type === value))
+                .map((el) => (
+        <li className='item' key={el.id}>{el.name}</li>   
+        ))
+        }
+    </ul>
 
     )
 
