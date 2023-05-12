@@ -19,3 +19,6 @@ app.use('/api/luggage', luggageRouter)
 app.use('/api/users', userRouter);
 
 
+app.listen(EXPRESS_PORT, () =>
+  console.log('Server is running on: %s', EXPRESS_PORT)
+);
