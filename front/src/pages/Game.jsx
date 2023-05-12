@@ -16,7 +16,14 @@ const Game = () => {
   return (
     <div className='game' style={{backgroundImage: `url(${country.img})`}}>
         <Card {...country} />
-        <img className='luggage'  src={luggage} alt="" />
+        <div className='main'>
+            <div className="objectsButtons">
+                <button className='play' type="submit" >Vetements</button>
+                <button className='play' type="submit" >Divers</button>
+                <button className='play' type="submit" >Specifiques</button>
+            </div>
+            <img className='luggage'  src={luggage} alt="" />
+        </div>
         <div className='buttons'>
             <Link to='/'><button className='play' type="submit" >RESET</button></Link>
             <Link to='/result'><button className='play' type="submit" >SUBMIT</button></Link>
