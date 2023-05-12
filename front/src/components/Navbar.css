@@ -22,10 +22,13 @@
   font-size: 1,5em;
   font-weight: 800;
 }
+
 .title > h2 {
   font-size: 1em;
   font-weight: 600;
+
 }
+
 .picture {
   width: 8%;
   border: #97403a solid 1px;
@@ -38,10 +41,6 @@
   object-fit: fill;
 }
 
-.user-picture:hover{
-cursor: pointer;
-}
-
-.user-picture:hover{
+.picture:hover{
 cursor: pointer;
 }

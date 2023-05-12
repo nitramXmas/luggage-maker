@@ -20,7 +20,7 @@
     position:absolute;
     right:50%;
     top:50%;
-    animation: turnAround 8s linear infinite;
+    animation: turnAround 8s linear 1s infinite alternate;
 }
 
 .play {
@@ -48,28 +48,14 @@
     25% {
       transform: translateX(9em,-9em) rotate(-45deg);
     }
-    25% {
-      transform: translate(18em,-20em) rotate(45deg);
-    }
     50% {
-        transform: translate(22em,-23em) rotate(45deg);
-        /* z-index: -1; */
+        transform: translate(22em,-15em) rotate(45deg);
     }
-    65%{
-        transform: translate(18em,-20em) rotate(45deg);
-        z-index: -1;
-    }
-    75% {
-      transform: translate(9em, -9em) rotate(-45deg);
-      z-index: -1;
-    }
-
-    90% {
-      transform: translate(-8em, 6em) rotate(0deg);
-      z-index: -1;
+    75%{
+        transform: translate(18em,-9em) rotate(45deg);
+    
     }
     100% {
         transform: translate(-6em, 6em) rotate(0deg);
-        z-index: -1;
     }
   }
