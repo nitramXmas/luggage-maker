@@ -1,15 +1,23 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Game from './pages/Game';
-import CreateUser from './components/CreateUser';
-import Login from './components/Login';
 import Luggage from './pages/Luggage';
-import UserProfile from './pages/UserProfile';
+import Game from './pages/Game';
+import Result from './pages/Result';
+import UserProfile from './pages/UserProfile'
+
 function App() {
   return (
     <>
       <Navbar />
-      <Luggage />
+        <Router>
+            <Routes>
+                <Route path='/' element={<Luggage />}/>
+                <Route path='/game' element={<Game />} />
+                <Route path='/profile' element={<UserProfile />} />
+                <Route path='/result' element={<Result />} />
+            </Routes>
+        </Router>
     </>
   );
 }
