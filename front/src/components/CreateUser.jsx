@@ -11,7 +11,7 @@ const CreateUser = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
-            .post('/api/users', {pseudo, password, email})
+            .post('/api/users', {pseudo, password, email, username: pseudo, firstname:pseudo, lastname:pseudo})
             .then((response) => response)
             .catch((err) => err)
     }
