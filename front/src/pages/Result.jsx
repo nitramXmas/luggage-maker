@@ -3,10 +3,6 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import './Result.css'
 
-const score = 200
-
-
-
 const Result = (props) => {
 
     const [perfectLuggage, setPerfectLuggage] = useState([])
@@ -18,8 +14,16 @@ const Result = (props) => {
     console.log(choice);
     console.log(perfectLuggage);
 
-    const finalScore = (choice, perfectLuggage ) => {
+    let score = 0
 
+
+
+        for(let i = 0; i < choice.length; i ++ ){
+            for(let j = 0; j < perfectLuggage.length; j ++){
+                if(choice[i].id === perfectLuggage[j].id) {
+                    score += choice[i].points
+                }
+            }
         
 
     }
