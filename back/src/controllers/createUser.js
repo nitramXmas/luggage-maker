@@ -1,15 +1,15 @@
 const database = require('../config/database');
 
 const createUser = (request, response) => {
-  const { firstname, lastname, email, city, language } = request.body;
+  const { username, password, firstname, lastname, email, profilpic } = request.body;
 
   database
     .query(
       `
-        INSERT INTO users (firstname, lastname, email, city, language) 
-        VALUES (?, ?, ?, ?, ?) 
+        INSERT INTO users (username, password, firstname, lastname, email, profilpic) 
+        VALUES (?, ?, ?, ?, ?, ?) 
         `,
-      [firstname, lastname, email, city, language]
+      [username, password, firstname, lastname, email, profilpic]
     )
     .then(([results]) => {
       return response.status(201).json(results);
