@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const EXPRESS_PORT = 3030;
 const countriesRouter = require('./src/routes/countries');
+const objectsRouter = require('./src/routes/objects');
 const cors = require('cors');
 
 const corsOptions = {
@@ -10,6 +11,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/api/countries', countriesRouter);
+app.use('/api/objects', objectsRouter )
 
 app.use(express.json());
 
