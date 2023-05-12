@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import Capy from '../assets/img/capy.png';
 import './Navbar.css';
