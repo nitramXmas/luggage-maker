@@ -89,10 +89,11 @@ const Game = () => {
         </div>
         <div className='buttons'>
             <Link to='/'><button className='play' type="submit" >RESET</button></Link>
-            <Link to='/result'><button className='play' type="submit" >SUBMIT</button></Link>
+            <Link to='/result'state ={{userChoice : userChoice, country : country}} ><button className='play' type="submit" >SUBMIT</button></Link>
         </div>
     </div>
   )
 }
 
 export default Game
+
